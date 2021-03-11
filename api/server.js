@@ -10,4 +10,8 @@ const server = express()
 server.use(express.json())
 server.use(postsRouter);
 
+server.get('*', (req,res) => {
+    res.send('<h1>KENAN</h1>')
+})
+
 module.exports = server
